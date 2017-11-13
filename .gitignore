@@ -1,0 +1,5 @@
+*.phar
+logs/
+docs/
+bin/
+vendor/

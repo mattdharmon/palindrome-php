@@ -1,0 +1,43 @@
+{
+    "name": "harmon/palindrome-php",
+    "authors": [
+        {
+            "name": "Matthew Harmon",
+            "email": "harmon.matthewd@gmail.com"
+        }
+    ],
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.1",
+        "reactivex/rxphp": "^2.0",
+        "monolog/monolog": "^1.23",
+        "league/climate": "^3.2"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^4.2"
+    },
+    "extra": {
+        "phar-builder": {
+            "compression": "GZip",
+            "name": "application.phar",
+            "output-dir": "./build",
+            "entry-point": "./Run.php",
+            // "include": ["bin","js","css"],
+            "include-dev": false,
+            "events": {
+                // "build.before" : "git describe --tags > bin/version.txt",
+                "build.after": [
+                    // "rm bin/version.txt",
+                    "chmod +x ../application.phar"
+                ]
+            }
+        }
+    }
+}
