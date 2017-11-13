@@ -2,7 +2,7 @@
 
 ## Description
 
-An test project for a job that I applied for.
+An test project for a job that I applied for. The project is suppossed to read a large file filled with "words" where "zzzzzz" could be a word, then sort the words from shortest length to longest length, and write it to a file.
 
 ## Requirements
 
